@@ -32,6 +32,11 @@ public class MathController {
         return 4 + " times " + 5 + " is equal to " + (number1 * number2) + "!";
     }
 //            /divide/6/by/3	2
+    @RequestMapping(path = "divide/{number1}/by/{number2}", method = RequestMethod.GET)
+    @ResponseBody
+    public String divide(@PathVariable int number1, @PathVariable int number2 ) {
+        return 6 + " divided by " + 3 + " is equal to " + (number1 / number2) + "!";
+}
 
 
 
