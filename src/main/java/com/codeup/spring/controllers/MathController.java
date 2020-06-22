@@ -24,9 +24,13 @@ public class MathController {
     }
 
 
-
-
 //            /multiply/4/and/5	20
+
+    @RequestMapping(path = "multiply/{number1}/and/{number2}", method = RequestMethod.GET)
+    @ResponseBody
+    public String multiply(@PathVariable int number1, @PathVariable int number2 ) {
+        return 4 + " times " + 5 + " is equal to " + (number1 * number2) + "!";
+    }
 //            /divide/6/by/3	2
 
 
