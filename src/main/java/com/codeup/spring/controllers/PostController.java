@@ -30,4 +30,5 @@ public class PostController {
     public String postCreatePost(){
         return "create a new post";
     }
+
 }

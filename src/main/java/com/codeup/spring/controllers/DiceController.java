@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 @Controller
 public class DiceController {
-    @GetMapping("/roll-dice")
-    public String rollDice(){
-        return "roll-dice-game/roll-dice";
-    }
+//    @GetMapping("/roll-dice/{guess}")
+//    public String rollDice(){
+//        return "roll-dice-game/roll-dice";
+//    }
 
     @GetMapping("/roll-dice/{guess}")
     public String rollDiceGuess(@PathVariable int guess, Model model){
