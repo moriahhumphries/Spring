@@ -1,10 +1,20 @@
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head :: head('Blog | All Posts')">
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>All Ads</title>
 </head>
 <body>
-
+<nav th:replace="templates/navbar :: navbar" />
+<div class="container">
+    <div th:if="${noPostsFound}">
+        No ads were found.
+    </div>
+    <div th:each="post : ${post}">
+        <h3 th:text="${post.title}">Title</h3>
+        <div th:text="${post.description}">Description</div>
+    </div>
+</div>
 </body>
 </html>
