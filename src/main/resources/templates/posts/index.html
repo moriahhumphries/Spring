@@ -8,12 +8,12 @@
 <body>
 <nav th:replace="partials/navbar :: navbar" />
 <div class="container">
-    <div th:if="${noPostsFound}">
-        No ads were found.
-    </div>
+<!--    <div th:if="${noPostsFound}">-->
+<!--        No ads were found.-->
+<!--    </div>-->
     <div th:each="post : ${posts}">
         <h3 th:text="${post.title}">Title</h3>
-        <div th:text="${post.description}">Description</div>
+        <div th:text="${post.body}">Body</div>
     </div>
 </div>
 </body>

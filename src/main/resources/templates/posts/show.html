@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="fragments/head :: head('Adlister | View Ad')">
+<head th:replace="partials/head :: head('Blog | All Posts')">
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
-<nav th:replace="fragments/navbar :: navbar" />
+<nav th:replace="partials/navbar :: navbar" />
 <div class="container">
     <div th:if="${post == null}">
         Post not found.
     </div>
     <div th:if="${post}">
-        <div th:text="${postId}">ID</div>
+        <div th:text="${post.id}">ID</div>
         <h3 th:text="${post.title}">Title</h3>
         <div th:text="${post.description}">Description</div>
     </div>

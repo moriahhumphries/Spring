@@ -28,9 +28,10 @@ public class PostController {
     @GetMapping("/posts/{id}")
     @ResponseBody
     public String show(@PathVariable long id, Model model){
-        model.addAttribute("postId", id);
-        model.addAttribute("post", new Post("Weather", "Hot"));
-        return "/posts/show" + id;
+        Post post = new Post(id,"Title 1", "Description 1");
+        model.addAttribute("title", post.getTitle());
+        model.addAttribute("body",post.getBody());
+        return "posts/show";
     }
 
     @GetMapping("/posts/{id}/edit")
