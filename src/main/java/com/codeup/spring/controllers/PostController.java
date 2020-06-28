@@ -10,21 +10,18 @@ import java.util.ArrayList;
 
 @Controller
 public class PostController {
+
     private PostsRepository postDao;
 
-    public PostController(PostsRepository postsRepository){
-        postDao = postsRepository;
+    public PostController(PostsRepository postDao){
+
+        this.postDao = postDao;
     }
+
     @GetMapping("/posts")
 //    @RequestMapping(value = "/posts", method = RequestMethod.GET)
-    public String index(Model model){
-        ArrayList<Post> adsList = new ArrayList<>();
-        adsList.add(new Post("Sunday", "Tired"));
-        adsList.add(new Post("Monday", "Still Tired"));
-        adsList.add(new Post("Tuesday", "Ope, tired again"));
-        adsList.add(new Post("Wednesday", "Wow, you guessed it"));
-        model.addAttribute("noPostsFound", adsList.size() == 0);
-        model.addAttribute("ads", adsList);
+    public String postIndex(Model model){
+        model.addAttribute("posts", postDao.findAll());
         return "posts/index";
     }
 
@@ -34,6 +31,29 @@ public class PostController {
         model.addAttribute("postId", id);
         model.addAttribute("post", new Post("Weather", "Hot"));
         return "/posts/show" + id;
+    }
+
+    @GetMapping("/posts/{id}/edit")
+    public String viewEditPostForm(@PathVariable long id, Model model) {
+        model.addAttribute("post", postDao.getOne(id));
+        return "posts/edit";
+    }
+
+    @PostMapping("/posts/{id}/edit")
+    public String updatePost(@PathVariable long id, @RequestParam String title, @RequestParam String body) {
+        Post post = new Post(
+                id,
+                title,
+                body
+        );
+        postDao.save(post);
+        return "redirect:/posts";
+    }
+
+    @PostMapping("/posts/{id}/delete")
+    public String deletePost(@PathVariable long id) {
+        postDao.deleteById(id);
+        return "redirect:/posts";
     }
 
     @GetMapping("/posts/create")
