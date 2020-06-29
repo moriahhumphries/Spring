@@ -42,13 +42,11 @@ public class PostController {
 
     @PostMapping("/posts/{id}/edit")
     public String updatePost(@PathVariable long id, @RequestParam String title, @RequestParam String body) {
-        Post post = new Post(
-                id,
-                title,
-                body
-        );
-        postDao.save(post);
-        return "redirect:/posts";
+        Post selectPost = postDao.getOne(id);
+                selectPost.setTitle(title);
+                selectPost.setBody(body);
+                postDao.save(selectPost);
+                return "redirect:/posts";
     }
 
     @PostMapping("/posts/{id}/delete")
