@@ -16,13 +16,34 @@ public class Post {
     @Column(nullable = false, columnDefinition = "TEXT")
     private String body;
 
+    @OneToOne
+    private User owner;
+
+    public Post(long id, String body, String s) {
+    }
+
+    public User getOwner() {
+        return owner;
+    }
+
+    public void setOwner(User owner) {
+        this.owner = owner;
+    }
+
     public Post() {
     }
 
-    public Post(long id, String title, String body){
+    public Post(String title, String body, User user){
+        this.title = title;
+        this.body = body;
+        this.owner = user;
+    }
+
+    public Post(long id, String title, String body, User user){
         this.id = id;
         this.title = title;
         this.body = body;
+        this.owner = user;
     }
     public String getTitle(){
         return this.title;
