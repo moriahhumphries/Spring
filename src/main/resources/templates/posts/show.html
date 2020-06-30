@@ -1,20 +1,28 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="partials/header :: head('View Posts')">
+<head th:replace="fragments/head :: head('Blog | View Post')">
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
-<nav th:replace="partials/navbar :: navbar" />
+<nav th:replace="fragments/navbar :: navbar" />
 <div class="container">
-<!--    <div th:if="${post == null}">-->
-<!--        Post not found.-->
-<!--    </div>-->
-    <div th:if="${posts}">
-        <div th:text="${id}">ID</div>
-        <h3 th:text="${posts.title}">Title</h3>
-        <div th:text="${posts.body}">Description</div>
-        <div>Created by <span th:text="${users.owner_id}"></span></div>
+    <div th:if="${post == null}">
+        Post not found.
+    </div>
+    <div th:if="${post}">
+        <div th:text="${postId}">ID</div>
+        <h3 th:text="${post.title}">Title</h3>
+        <div th:text="${post.description}">Description</div>
+        <div>Created by <span th:text="${post.owner.username}"></span></div>
+        <h3>Categories</h3>
+        <ul>
+            <li th:each="category: ${post.categories}" th:text="${category.name}"></li>
+        </ul>
+        <div th:each="image: ${post.images}">
+            <img th:src="${image.path}" th:alt="${image.description}">
+        </div>
+
     </div>
 </div>
 </body>

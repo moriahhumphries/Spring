@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="partials/head :: head('Blog | All Posts')">
+    <meta charset="UTF-8">
+    <title>All Posts</title>
+</head>
+<body>
+<nav th:replace="partials/navbar :: navbar" />
+<div class="container">
+<!--    <div th:if="${noPostsFound}">-->
+<!--        No ads were found.-->
+<!--    </div>-->
+    <div th:each="post : ${posts}">
+        <h3 th:text="${post.title}">Title</h3>
+        <div th:text="${post.body}">Description</div>
+<!--        <div>Created by <span th:text="${post}"></span></div>-->
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+<!--    <div th:each="post : ${posts}">-->
+<!--        <h3 th:text="${post.title}">Title</h3>-->
+<!--        <div th:text="${post.body}">Body</div>-->
+<!--        <a th:href="@{|/posts/${post.id}/edit|}">Edit Post</a>-->
+<!--        <form th:action="@{|/posts/${post.id}/delete|}" th:method="POST">-->
+<!--            <button>Delete Post</button>-->
+<!--        </form>-->
+<!--    </div>-->

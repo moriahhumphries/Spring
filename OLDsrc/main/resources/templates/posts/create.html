@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="fragments/head :: head('Blog | View Post')">
+<head th:replace="fragments/head :: head('Create Post')">
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
@@ -12,7 +12,7 @@
         <input th:field="*{title}" />
         <br />
         Description:
-        <input th:field="*{description}" />
+        <input th:field="*{body}" />
         <br />
         <input type="submit" />
     </form>
