@@ -19,17 +19,6 @@ public class Post {
     @OneToOne
     private User owner;
 
-    public Post(long id, String body, String s) {
-    }
-
-    public User getOwner() {
-        return owner;
-    }
-
-    public void setOwner(User owner) {
-        this.owner = owner;
-    }
-
     public Post() {
     }
 
@@ -45,6 +34,18 @@ public class Post {
         this.body = body;
         this.owner = owner;
     }
+
+    public Post(String title, String description, User currentUser, Object o, Object o1) {
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
     public String getTitle(){
         return this.title;
     }
@@ -61,11 +62,11 @@ public class Post {
         this.body = newBody;
     }
 
-    public long getId() {
-        return id;
+    public User getOwner() {
+        return owner;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public void setOwner(User owner) {
+        this.owner = owner;
     }
 }
