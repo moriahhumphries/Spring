@@ -7,9 +7,9 @@
 <body>
     <nav th:replace="fragments/navbar :: navbar" />
     <div class="container">
-        <div th:if="${nopostsFound}">
-            No posts were found.
-        </div>
+<!--        <div th:if="${nopostsFound}">-->
+<!--            No posts were found.-->
+<!--        </div>-->
         <div th:each="post : ${posts}">
             <h3 th:text="${post.title}">Title</h3>
             <div th:text="${post.description}">Description</div>

@@ -2,6 +2,7 @@ package com.codeup.blog.controllers;
 
 import com.codeup.blog.daos.PostsRepository;
 import com.codeup.blog.daos.UsersRepository;
+import com.codeup.blog.services.EmailService;
 import com.codeup.blog.models.Post;
 import com.codeup.blog.models.User;
 import org.springframework.stereotype.Controller;
@@ -16,23 +17,22 @@ public class PostsController {
     // dependency injection
     private PostsRepository postsDao;
     private UsersRepository usersDao;
+    private EmailService emailService;
 
-    public PostsController(PostsRepository postsRepository, UsersRepository usersRepository){
-        postsDao = postsRepository;
-        usersDao = usersRepository;
+    public PostsController(PostsRepository adsRepository, UsersRepository usersRepository, EmailService emailService){
+        this.postsDao = adsRepository;
+        this.usersDao = usersRepository;
+        this.emailService = emailService;
     }
+
 
     @GetMapping("/posts")
 //    @RequestMapping(value = "/posts", method = RequestMethod.GET)
     public String index(Model model){
-
-        Post firstPost = postsDao.findFirstByTitle("psvita");
-        System.out.println("firstPost.getId() = " + firstPost.getId());
-
         List<Post> postsList = postsDao.findAll();
-        model.addAttribute("nopostsFound", postsList.size() == 0);
+        model.addAttribute("noPostsFound", postsList.size() == 0);
         model.addAttribute("posts", postsList);
-        return "posts/index";
+        return "/posts/index";
     }
 
     @GetMapping("/posts/{id}")
@@ -46,7 +46,7 @@ public class PostsController {
     @GetMapping("/posts/create")
     public String showForm(Model viewModel){
         viewModel.addAttribute("post", new Post());
-        return "posts/create";
+        return "/posts/create";
     }
 
     @PostMapping("/posts/create")
@@ -54,7 +54,8 @@ public class PostsController {
         User currentUser = usersDao.getOne(1L);
         postToBeSaved.setOwner(currentUser);
         Post savedPost = postsDao.save(postToBeSaved);
-        return "redirect:/posts/" + savedPost.getId();
+        emailService.prepareAndSend(savedPost, "A new post was created", "A new post has been created with the id of " + savedPost.getId());
+        return "redirect:/posts/create" + savedPost.getId();
     }
 
     @GetMapping("/posts/{id}/edit")
@@ -69,8 +70,7 @@ public class PostsController {
     public String update(@ModelAttribute Post posttoEdit){
         User currentUser = usersDao.getOne(1L);
         posttoEdit.setOwner(currentUser);
-        // save the changes
-        postsDao.save(posttoEdit); // update posts set title = ? where id = ?
+        postsDao.save(posttoEdit);
         return "redirect:/posts/" + posttoEdit.getId();
     }
 

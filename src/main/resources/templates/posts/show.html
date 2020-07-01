@@ -16,12 +16,12 @@
         <div th:text="${post.description}">Description</div>
         <div>Created by <span th:text="${post.owner.username}"></span></div>
         <h3>Categories</h3>
-        <ul>
-            <li th:each="category: ${post.categories}" th:text="${category.name}"></li>
-        </ul>
-        <div th:each="image: ${post.images}">
-            <img th:src="${image.path}" th:alt="${image.description}">
-        </div>
+<!--        <ul>-->
+<!--            <li th:each="category: ${post.categories}" th:text="${category.name}"></li>-->
+<!--        </ul>-->
+<!--        <div th:each="image: ${post.images}">-->
+<!--            <img th:src="${image.path}" th:alt="${image.description}">-->
+<!--        </div>-->
 
     </div>
 </div>
