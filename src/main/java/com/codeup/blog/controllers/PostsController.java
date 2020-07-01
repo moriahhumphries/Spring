@@ -19,8 +19,8 @@ public class PostsController {
     private UsersRepository usersDao;
     private EmailService emailService;
 
-    public PostsController(PostsRepository adsRepository, UsersRepository usersRepository, EmailService emailService){
-        this.postsDao = adsRepository;
+    public PostsController(PostsRepository postsRepository, UsersRepository usersRepository, EmailService emailService){
+        this.postsDao = postsRepository;
         this.usersDao = usersRepository;
         this.emailService = emailService;
     }
