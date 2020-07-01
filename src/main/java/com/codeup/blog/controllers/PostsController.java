@@ -55,7 +55,7 @@ public class PostsController {
         postToBeSaved.setOwner(currentUser);
         Post savedPost = postsDao.save(postToBeSaved);
         emailService.prepareAndSend(savedPost, "A new post was created", "A new post has been created with the id of " + savedPost.getId());
-        return "redirect:/posts/create" + savedPost.getId();
+        return "redirect:/posts/" + savedPost.getId();
     }
 
     @GetMapping("/posts/{id}/edit")
