@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head :: head('Blog | Login')">
+
 <head>
     <meta charset="UTF-8" />
     <title>Log In</title>
 </head>
 <body>
+<nav th:replace="fragments/navbar :: navbar" />
 <h1>Log In</h1>
 <div th:if="${param.error}">
     Invalid Username and Password.
