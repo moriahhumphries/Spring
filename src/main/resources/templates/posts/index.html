@@ -11,7 +11,9 @@
 <!--            No posts were found.-->
 <!--        </div>-->
         <div th:each="post : ${posts}">
+            <a href="/posts/">
             <h3 th:text="${post.title}">Title</h3>
+            </a>
             <div th:text="${post.description}">Description</div>
         </div>
     </div>
