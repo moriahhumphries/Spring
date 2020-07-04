@@ -22,10 +22,10 @@
 
 .neon{
     font-family: 'Monoton', cursive;
-    font-size:130px;
+    font-size:150px;
     color: #e0830d;
     position: absolute;
-    top: 50%;
+    top: 54%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-weight: 400;
