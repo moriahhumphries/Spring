@@ -32,7 +32,7 @@ public class PostsController {
         List<Post> postsList = postsDao.findAll();
         model.addAttribute("noPostsFound", postsList.size() == 0);
         model.addAttribute("posts", postsList);
-        return "/posts/index";
+        return "posts/index";
     }
 
     @GetMapping("/posts/{id}")
@@ -40,13 +40,13 @@ public class PostsController {
         Post post = postsDao.getOne(id);
         model.addAttribute("postId", id);
         model.addAttribute("post", post);
-        return "/posts/show";
+        return "posts/show";
     }
 
     @GetMapping("/posts/create")
     public String showForm(Model viewModel){
         viewModel.addAttribute("post", new Post());
-        return "/posts/create";
+        return "posts/create";
     }
 
     @PostMapping("/posts/create")
