@@ -16,8 +16,8 @@
     padding: 0 !important;
     background-image: linear-gradient(
             to right bottom,
-            rgba(31, 61, 55, 0.7),
-            rgba(23, 199, 144, 0.7)), url("/img/teal-board.jpg");
+            rgba(21, 40, 36, 0.7),
+            rgba(37, 132, 102, 0.7)), url("/img/teal-board.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
