@@ -130,17 +130,22 @@ button {
     /*background-position: top;*/
 }
 
-/*#login-header {*/
-/*    position: absolute;*/
-/*    top: 10%;*/
-/*    left: 50%;*/
-/*}*/
-
-#login-forms {
-    position: absolute;
-        top: 15%;
-        left: 35%;
+#login-header {
+    color: white;
+    font-family: 'Monoton', cursive;
+    text-shadow: 3px 3px 5px #000000;
+    font-size: 4em;
+    padding-top: 5%;
+    padding-bottom: 2%;
 }
+
+.login-labels {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 1.25em;
+    text-shadow: 3px 3px 5px #000000;
+}
+
 
 /*Signup Styling*/
 

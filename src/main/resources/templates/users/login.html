@@ -5,8 +5,8 @@
 </head>
 <body>
 <div id="login-main">
-<nav th:replace="fragments/navbar :: navbar" />
-<!--<h1 class="neon-small text-center" id="login-header">Log In</h1>-->
+<!--<nav th:replace="fragments/navbar :: navbar" />-->
+<h1 class="text-center" id="login-header">Log In</h1>
 <div th:if="${param.error}">
     Invalid Username and Password.
 </div>
@@ -14,10 +14,10 @@
     You have been logged out.
 </div>
 <div id="login-forms">
-<form th:action="@{/login}" method="post">
-    <label for="username">Username</label>
+<form th:action="@{/login}" method="post" class="text-center">
+    <label for="username" class="login-labels">Username</label>
     <input id="username" name="username" type="text" />
-    <label for="password">Password</label>
+    <label for="password" class="login-labels">Password</label>
     <input id="password" name="password" type="password" />
     <input type="submit" value="Login" />
 </form>

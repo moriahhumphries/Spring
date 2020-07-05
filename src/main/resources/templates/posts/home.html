@@ -18,7 +18,8 @@
         <span th:text="${#authentication.principal.username}"/>
     </p>
 
-    <button id="signup" class="hello"><a href="/signup">Sign Up</a></button>
+    <button id="signup" class="hello" sec:authorize="!isAuthenticated()">
+    <a href="/signup">Sign Up</a></button>
 
 </div>
 </body>
