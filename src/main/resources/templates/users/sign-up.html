@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 <body>
-<div id="background">
+<div id="sign-background">
 <div id="signup-main">
-<h1>Stay Awhile.</h1>
-<form th:action="@{/sign-up}" method="POST" th:object="${user}">
-    <label for="username">Username</label>
+<h1 id="signup-header" class="text-center">Stay Awhile.</h1>
+<form id="signup-form" class="text-center" th:action="@{/sign-up}" method="POST" th:object="${user}">
+    <label for="username" class="signup-labels">Username</label>
     <input id="username" th:field="*{username}" />
 
-    <label for="email">Email</label>
+    <label for="email" class="signup-labels">Email</label>
     <input id="email" th:field="*{email}" />
 
-    <label for="password">Password</label>
+    <label for="password" class="signup-labels">Password</label>
     <input id="password" type="password" th:field="*{password}" />
 
     <input value="Sign me up!" type="submit" />

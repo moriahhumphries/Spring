@@ -145,12 +145,12 @@ button {
     padding: 0 !important;
     background-image: url("/img/room-small.png");
     background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+    background-size: cover;
+    background-position: bottom;
     z-index: 1000;
 }
 
-#background {
+#sign-background {
     background-color: #25363d;
     background-image: linear-gradient(
             to bottom,
@@ -158,6 +158,22 @@ button {
             rgb(255, 120, 57),
             #f7ece3
     );
+}
+
+#signup-header {
+    color: white;
+    font-family: 'Monoton', cursive;
+    text-shadow: 3px 3px 5px #000000;
+    font-size: 4em;
+    padding-top: 5%;
+    padding-bottom: 2%;
+}
+
+.signup-labels {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 1.25em;
+    text-shadow: 3px 3px 5px #000000;
 }
 
 
