@@ -7,11 +7,11 @@
 <div id="login-main">
 <!--<nav th:replace="fragments/navbar :: navbar" />-->
 <h1 class="text-center" id="login-header">Log In</h1>
-<div th:if="${param.error}">
+<div id="login-warning-text" class="text-center flicker-fast" th:if="${param.error}">
     Invalid Username and Password.
 </div>
-<div th:if="${param.logout}">
-    You have been logged out.
+<div id="logout-text" class="text-center flicker-fast" th:if="${param.logout}">
+    You have logged out.
 </div>
 <div id="login-forms">
 <form th:action="@{/login}" method="post" class="text-center">

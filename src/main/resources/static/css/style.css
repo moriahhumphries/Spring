@@ -144,7 +144,7 @@ button {
     text-shadow: 3px 3px 5px #000000;
     font-size: 4em;
     padding-top: 5%;
-    padding-bottom: 2%;
+    /*padding-bottom: 2%;*/
 }
 
 .login-labels {
@@ -153,6 +153,17 @@ button {
     font-size: 1.25em;
     text-shadow: 3px 3px 5px #000000;
 }
+
+#logout-text, #login-warning-text {
+    color: white;
+    font-family: 'Monoton', cursive;
+    text-shadow: 3px 3px 5px #000000;
+    font-size: 2em;
+    padding-top: -6%;
+
+}
+
+
 
 
 /*Signup Styling*/
