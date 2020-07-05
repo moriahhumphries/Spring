@@ -5,12 +5,37 @@
 /*Navbar styling */
 
 #main-navbar {
-    background-color: rgba(0, 0, 0, 0.7) !important;
+    height: 10vh;
+    width: 100vw;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+#main-navbar > * {
+    color: white!important;
+    font-family: 'Monoton', cursive;
+    font-size: 1.5em!important;
 }
 
-#main-navbar > a {
+nav {
     color: white!important;
+    font-family: 'Monoton', cursive;
+    font-size: 1.5em!important;
 }
+
+#posts-link, #create-link, #join-link, #login-link , #exit-link, #user-greeting, #logout-button{
+    color: white!important;
+    font-family: 'Monoton', cursive;
+    text-decoration: none;
+    font-size: inherit;
+}
+
+#user-greeting {
+}
+
+
+
+
 
 
 
@@ -94,14 +119,14 @@
 #visitor-posts {
     position: absolute;
     top: 66%;
-    left: 45%;
+    left: 44%;
 }
 
 /*Authenticated user view posts*/
 #posts {
     position: absolute;
     top: 58%;
-    left: 45%;
+    left: 44%;
 }
 
 .hello:hover {
@@ -214,6 +239,18 @@
     text-shadow: 3px 3px 5px #000000;
 }
 
+/*Posts Index*/
+
+#index-main {
+    height: 100vh;
+    width: 100vw;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-image: url("/img/teal-board.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 
 
 

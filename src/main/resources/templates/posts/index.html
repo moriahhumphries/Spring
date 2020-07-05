@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="fragments/head :: head('Blog | All Posts')">
+<head th:replace="fragments/head :: head('Explore.')">
     <meta charset="UTF-8">
-    <title>All Posts</title>
 </head>
 <body>
+<div id="index-main">
     <nav th:replace="fragments/navbar :: navbar" />
     <div class="container">
 <!--        <div th:if="${nopostsFound}">-->
@@ -16,6 +16,7 @@
             </a>
             <div th:text="${post.description}">Description</div>
         </div>
+    </div>
     </div>
 </body>
 </html>

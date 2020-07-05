@@ -5,26 +5,32 @@
     <title>Title</title>
 </head>
 <body>
-<nav id="main-navbar" class="navbar navbar-expand-lg navbar-light" th:fragment="navbar">
-    <a class="navbar-brand" href="/posts">View.</a>
-    <a class="navbar-brand" href="/posts/create">Create.</a>
-    <div class="collapse navbar-collapse" id="navbar">
-        <ul class="navbar-nav ml-auto">
 
-            <a class="navbar-brand" href="/sign-up" sec:authorize="!isAuthenticated()">Join</a>
-            <li class="navbar-brand" sec:authorize="!isAuthenticated()">
-                <a class="navbar-brand" href="/login">Enter.</a>
+<nav id="main-navbar" class="navbar navbar-expand-lg" th:fragment="navbar">
+    <div class="collapse navbar-collapse" id="navbar">
+        <ul class="navbar-nav">
+            <li>
+                <a id="posts-link" class="navbar-brand" href="/posts">View.</a>
             </li>
-            <li sec:authorize="isAuthenticated()">Hello,
+            <li>
+                <a id="create-link" class="navbar-brand" href="/posts/create">Create.</a>
+            </li>
+            <li sec:authorize="!isAuthenticated()">
+                <a id="join-link" class="navbar-brand" href="/sign-up">Join.</a>
+            </li>
+            <li sec:authorize="!isAuthenticated()">
+                <a id="login-link" class="navbar-brand" href="/login">Enter.</a>
+            </li>
+            <li sec:authorize="isAuthenticated()" class="navbar-brand" id="user-greeting">Hello,&nbsp;&nbsp;&nbsp;
                 <span th:text="${#authentication.principal.username}"/>
             </li>
-            <li class="navbar-brand" sec:authorize="isAuthenticated()">
+            <li class="navbar-brand"  id="logout-button" sec:authorize="isAuthenticated()">
                 <form th:action="@{/logout}" th:method="post">
-                    <button class="btn-link btn">Exit.</button>
+                    <button class="btn-link btn navbar-brand" id="exit-link">Exit.</button>
                 </form>
             </li>
         </ul>
-    </div>
+</div>
 </nav>
 </body>
 </html>
