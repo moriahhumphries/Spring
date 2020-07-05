@@ -21,6 +21,9 @@
     <button id="signup" class="hello" sec:authorize="!isAuthenticated()">
     <a href="/signup">Sign Up</a></button>
 
+    <button id="posts" class="hello" sec:authorize="isAuthenticated()">
+        <a href="/posts">Enter</a></button>
+
 </div>
 </body>
 </html>
