@@ -14,7 +14,10 @@
     width: 100vw;
     margin: 0 !important;
     padding: 0 !important;
-    background-image: url("/img/teal-board-dark.png");
+    background-image: linear-gradient(
+            to right bottom,
+            rgba(31, 61, 55, 0.7),
+            rgba(23, 199, 144, 0.7)), url("/img/teal-board.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
