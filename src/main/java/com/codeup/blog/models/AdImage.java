@@ -17,23 +17,23 @@
 //    private String description;
 //
 //    @ManyToOne
-//    @JoinColumn(name = "ad_id")
-//    private Post ad;
+//    @JoinColumn(name = "post_id")
+//    private Post post;
 //
 //    public AdImage() {
 //    }
 //
-//    public AdImage(String path, String description, Post ad) {
+//    public PostImage(String path, String description, Post Post) {
 //        this.path = path;
 //        this.description = description;
-//        this.ad = ad;
+//        this.post = post;
 //    }
 //
-//    public AdImage(long id, String path, String description, Post ad) {
+//    public PostImage(long id, String path, String description, Post post) {
 //        this.id = id;
 //        this.path = path;
 //        this.description = description;
-//        this.ad = ad;
+//        this.post = post;
 //    }
 //
 //    public long getId() {
@@ -60,11 +60,11 @@
 //        this.description = description;
 //    }
 //
-//    public Post getAd() {
-//        return ad;
+//    public Post getPost() {
+//        return post;
 //    }
 //
-//    public void setAd(Post ad) {
-//        this.ad = ad;
+//    public void setAd(Post post) {
+//        this.post = post;
 //    }
 //}

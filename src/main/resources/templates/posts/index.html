@@ -6,17 +6,29 @@
 <body>
 <div id="index-main">
     <nav th:replace="fragments/navbar :: navbar" />
-    <div class="container">
-<!--        <div th:if="${nopostsFound}">-->
-<!--            No posts were found.-->
+<!--    <div class="container">-->
+<!--&lt;!&ndash;        <div th:if="${nopostsFound}">&ndash;&gt;-->
+<!--&lt;!&ndash;            No posts were found.&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--        <div th:each="post : ${posts}">-->
+<!--            <a href="/posts/">-->
+<!--            <h3 th:text="${post.title}">Title</h3>-->
+<!--            </a>-->
+<!--            <div th:text="${post.description}">Description</div>-->
 <!--        </div>-->
-        <div th:each="post : ${posts}">
-            <a href="/posts/">
-            <h3 th:text="${post.title}">Title</h3>
-            </a>
-            <div th:text="${post.description}">Description</div>
-        </div>
+<!--    </div>-->
+<!--    </div>-->
+
+<div class="card container" th:each="post : ${posts}" style="width: 18rem;">
+    <img src="..." class="card-img-top">
+    <div class="card-body">
+        <a href="/posts/">
+        <h5 class="card-title"th:text="${post.title}">Title</h5>
+        </a>
+        <p class="card-text" th:text="${post.description}">Text</p>
+        <a href="#" class="btn btn-primary">Expand.</a>
     </div>
-    </div>
+</div>
+</div>
 </body>
 </html>

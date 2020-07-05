@@ -39,8 +39,6 @@ nav {
 
 
 
-
-
 /*Homepage Styling*/
 
 #home-main {
@@ -257,6 +255,11 @@ nav {
     background-position: center;
 }
 
+/*Posts Index*/
+
+.card {
+    margin: 20px;
+}
 
 
 
