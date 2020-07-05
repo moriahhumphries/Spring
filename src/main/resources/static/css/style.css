@@ -151,7 +151,13 @@ button {
 }
 
 #background {
-
+    background-color: rgb(29, 39, 42);
+    background-image: linear-gradient(
+            to bottom,
+            rgb(29, 39, 42) 90%,
+            rgb(255, 147, 57),
+            #f7ece3
+    );
 }
 
 
