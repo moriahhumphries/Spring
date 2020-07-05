@@ -86,12 +86,20 @@
     left: 52%;
 }
 
-/*
-*/
+/*Non-Authenticated user view posts*/
+
+
+#visitor-posts {
+    position: absolute;
+    top: 66%;
+    left: 45%;
+}
+
+/*Authenticated user view posts*/
 #posts {
     position: absolute;
     top: 58%;
-    left: 44%;
+    left: 45%;
 }
 
 .hello:hover {
