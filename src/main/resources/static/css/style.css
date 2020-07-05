@@ -34,6 +34,7 @@
     font-family: 'Monoton', cursive;
     font-size:8em;
     color: #e0830d;
+
     position: absolute;
     top: 50%;
     left: 50%;
@@ -42,7 +43,7 @@
     letter-spacing: 8px;
     text-shadow: 1px 0px 4px #ff8c00, 2px 0px 4px #ef9b06, 3px 0px 4px #ffbf00, 2px 0px 3px #ff8400, 2px 3px 15px #e37a0e, 2px 0px 15px, 5px 0px 125px, 20px 0vw 200px #ffbf04,40px 0vw 200px #ff9c00;
 }
-
+/*FFFFBF00*/
 
 /*Taglines or small headers*/
 .neon-small {
@@ -87,27 +88,32 @@
 
 .hello:hover {
     letter-spacing: 0.8em;
-    background-color: rgba(255, 156, 0, 0.7);
+    background-color: rgba(255, 255, 255, 0.7);
+    /*background-color: rgba(255, 156, 0, 0.7);*/
     font-weight: bolder;
 }
 
 .hello > a{
-    color: white!important;
-    font-size: 1em;
+    color: rgb(25, 78, 78) !important;
+    font-size: 1.25em;
     text-decoration: none;
+    /*text-shadow: 1px 1px 3px #000000;*/
+
 }
 button {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Monoton', cursive;
     height: 4em;
     width: 12%;
-    padding: 1.5em;
+    padding: 1.25em;
     margin: 1em auto;
-    background-color: rgba(255, 156, 0, 0.6);
+    background-color: rgba(255, 255, 255, 0.5);
+    /*background-color: rgba(255, 156, 0, 0.6);*/
     border: 1px solid rgba(19, 62, 62, 0.6);
     border-radius: 10px;
     text-transform: uppercase;
     letter-spacing: 0.5em;
     transition: all 0.2s cubic-bezier(.4,0,.2,1);
+    box-shadow: 1px 1px 1px rgba(19, 62, 62, 0.5);
 }
 
 /*Login page styling*/
