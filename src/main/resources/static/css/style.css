@@ -151,11 +151,11 @@ button {
 }
 
 #background {
-    background-color: rgb(29, 39, 42);
+    background-color: #25363d;
     background-image: linear-gradient(
             to bottom,
-            rgb(29, 39, 42) 90%,
-            rgb(255, 147, 57),
+            #25363d 90%,
+            rgb(255, 120, 57),
             #f7ece3
     );
 }
