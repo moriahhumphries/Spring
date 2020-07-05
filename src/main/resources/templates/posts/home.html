@@ -10,22 +10,26 @@
 <!--<nav th:replace="fragments/navbar :: navbar" />-->
 <h1 class="neon" data-text="U"><span class="flicker-fast">C</span>O<span class="flicker-slow">NT</span>INU<span class="flicker-fast">IT</span>Y</h1>
 <!--    <h5 class="neon-small">a collection of photos.</h5>-->
+<!--    <p sec:authorize="isAuthenticated()">Hello,-->
+<!--        <span th:text="${#authentication.principal.username}"/>-->
+<!--    </p>-->
 
+    <div id="buttons">
     <button id="login" class="hello home-button" sec:authorize="!isAuthenticated()">
         <a href="/login">Login</a>
     </button>
-    <p sec:authorize="isAuthenticated()">Hello,
-        <span th:text="${#authentication.principal.username}"/>
-    </p>
+
 
     <button id="signup" class="hello home-button" sec:authorize="!isAuthenticated()">
-    <a href="/sign-up">Sign Up</a></button>
+    <a href="/sign-up">Join</a></button>
 
     <button id="visitor-posts" class="hello home-button" sec:authorize="!isAuthenticated()">
         <a href="/posts">Posts</a></button>
 
     <button id="posts" class="hello home-button" sec:authorize="isAuthenticated()">
         <a href="/posts">Enter</a></button>
+
+    </div>
 
 </div>
 </body>

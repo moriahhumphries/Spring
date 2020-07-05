@@ -104,15 +104,17 @@ nav {
 }
 
 #login {
-    position: absolute;
+    position: fixed;
     top: 58%;
     left: 37%;
+    margin: 10px;
 }
 
 #signup {
     position: absolute;
     top: 58%;
     left: 52%;
+    margin: 10px;
 }
 
 /*Non-Authenticated user view posts*/
@@ -120,8 +122,9 @@ nav {
 
 #visitor-posts {
     position: absolute;
-    top: 66%;
+    top: 70%;
     left: 44%;
+    margin: 10px;
 }
 
 /*Authenticated user view posts*/
