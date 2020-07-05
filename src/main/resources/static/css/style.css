@@ -21,13 +21,15 @@
     width: 100vw;
     margin: 0 !important;
     padding: 0 !important;
-    background-image: linear-gradient(
-            to right bottom,
-            rgba(13, 23, 50, 0.7),
-            rgba(37, 132, 102, 0.7)), url("/img/teal-board.jpg");
+    background-image:
+            /*linear-gradient(*/
+            /*to right bottom,*/
+            /*rgba(13, 23, 50, 0.7),*/
+            /*rgba(37, 132, 102, 0.7)), */
+    url("/img/teal-lights.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: top;
+    background-position: center;
 }
 
 .neon{
@@ -104,13 +106,12 @@
 
 .hello:hover {
     letter-spacing: 0.8em;
-    background-color: rgba(255, 255, 255, 0.7);
-    /*background-color: rgba(255, 156, 0, 0.7);*/
+    background-color: rgba(255, 255, 255, 0.9);
     font-weight: bolder;
 }
 
 .hello > a{
-    color: rgb(25, 78, 78) !important;
+    color: rgb(27, 94, 94); !important;
     font-size: 1.25em;
     text-decoration: none;
     /*text-shadow: 1px 1px 3px #000000;*/
@@ -122,8 +123,8 @@
     width: 12%;
     padding: 1.25em;
     margin: 1em auto;
-    background-color: rgba(255, 255, 255, 0.5);
-    border: 1px solid rgba(19, 62, 62, 0.6);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(24, 83, 83, 0.6);
     border-radius: 10px;
     text-transform: uppercase;
     letter-spacing: 0.5em;
