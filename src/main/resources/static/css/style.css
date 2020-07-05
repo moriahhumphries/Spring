@@ -2,6 +2,18 @@
 /*#fcca47 - light yellow orange*/
 /*#fdab3b - light orange*/
 
+/*Navbar styling */
+
+#main-navbar {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+#main-navbar > a {
+    color: white!important;
+}
+
+
+
 /*Homepage Styling*/
 
 #home-main {
@@ -35,11 +47,9 @@
 /*Taglines or small headers*/
 .neon-small {
     font-family: 'Monoton', cursive;
-    font-size: 35px;
+    font-size: 50px;
     color: #e0830d;
     position: absolute;
-    top: 65%;
-    left: 65%;
     transform: translate(-50%, -50%);
     text-shadow: 1px 0px 4px #ff8c00, 2px 0px 4px #ef9b06, 3px 0px 4px #ffbf00, 2px 0px 3px #ff8400, 2px 3px 15px #e37a0e, 2px 0px 15px, 5px 0px 125px, 20px 0vw 200px #ffbf04,40px 0vw 200px #ff9c00;
 }
@@ -102,6 +112,33 @@ button {
 
 /*Login page styling*/
 
+#login-main {
+    height: 100vh;
+    width: 100vw;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-image:
+            /*linear-gradient(*/
+            /*to right bottom,*/
+            /*rgba(13, 23, 50, 0.7),*/
+            /*rgba(37, 132, 102, 0.7)), */
+    url("/img/enter.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*background-position: top;*/
+}
+
+/*#login-header {*/
+/*    position: absolute;*/
+/*    top: 10%;*/
+/*    left: 50%;*/
+/*}*/
+
+#login-forms {
+    position: absolute;
+        top: 15%;
+        left: 35%;
+}
 
 
 
