@@ -6,19 +6,12 @@
 </head>
 <body>
 <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light" th:fragment="navbar">
-    <a class="navbar-brand" href="/posts">All Blog Posts</a>
-    <a class="navbar-brand" href="/posts/create">Create Post</a>
-<!--    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">-->
-<!--        <span class="navbar-toggler-icon"></span>-->
-<!--    </button>-->
-<!--    <form action="/search">-->
-<!--        <input type="text" name="term" placeholder="Search term">-->
-<!--        <button class="btn">Search</button>-->
-<!--    </form>-->
+    <a class="navbar-brand" href="/posts">View.</a>
+    <a class="navbar-brand" href="/posts/create">Create.</a>
     <div class="collapse navbar-collapse" id="navbar">
         <ul class="navbar-nav ml-auto">
 
-            <a class="navbar-brand" href="/sign-up">Sign Up</a>
+            <a class="navbar-brand" href="/sign-up" sec:authorize="!isAuthenticated()">Sign Up</a>
             <li class="nav-item" sec:authorize="!isAuthenticated()">
                 <a class="navbar-brand" href="/login">Login</a>
             </li>
@@ -35,3 +28,11 @@
 </nav>
 </body>
 </html>
+
+<!--    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--        <span class="navbar-toggler-icon"></span>-->
+<!--    </button>-->
+<!--    <form action="/search">-->
+<!--        <input type="text" name="term" placeholder="Search term">-->
+<!--        <button class="btn">Search</button>-->
+<!--    </form>-->
