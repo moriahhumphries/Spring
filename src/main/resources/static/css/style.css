@@ -30,9 +30,11 @@ nav {
     font-size: inherit;
 }
 
-#user-greeting {
-}
+#exit-link {
+    border: 0;
+    background-color: black;
 
+}
 
 
 
