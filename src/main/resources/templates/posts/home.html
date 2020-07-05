@@ -2,20 +2,24 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head th:replace="fragments/head :: head('Continuity.')">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 <body>
-<div id="home-main">
-<nav th:replace="fragments/navbar :: navbar" />
-<h1 class="neon" data-text="U"><span class="flicker-fast">C</span>O<span class="flicker-slow">NT</span>INU<span class="flicker-fast">IT</span>Y.</h1>
 
-    <button sec:authorize="!isAuthenticated()">
+<div id="home-main">
+<!--<nav th:replace="fragments/navbar :: navbar" />-->
+<h1 class="neon" data-text="U"><span class="flicker-fast">C</span>O<span class="flicker-slow">NT</span>INU<span class="flicker-fast">IT</span>Y</h1>
+<!--    <h5 class="neon-small">a collection of photos.</h5>-->
+
+    <button id="login" class="hello" sec:authorize="!isAuthenticated()">
         <a href="/login">Login</a>
     </button>
     <p sec:authorize="isAuthenticated()">Hello,
         <span th:text="${#authentication.principal.username}"/>
     </p>
 
-    <button><a href="/signup">Sign Up</a></button>
+    <button id="signup" class="hello"><a href="/signup">Sign Up</a></button>
+
 </div>
 </body>
 </html>
