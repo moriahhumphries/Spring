@@ -20,7 +20,7 @@
 <!--    </div>-->
 
 <div class="card container" th:each="post : ${posts}" style="width: 25rem;">
-    <img src="..." class="card-img-top">
+<!--    <img src="..." class="card-img-top">-->
     <div class="card-body">
         <a th:href="${'/posts/' + post.id}">
         <h5 class="card-title flicker-slow text-center" id="post-title" th:text="${post.title}">Title</h5>
