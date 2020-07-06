@@ -7,10 +7,13 @@
 #main-navbar {
     height: 10vh;
     width: 100vw;
-    background-image: url("img/white-and-black.jpg");
+    background-color: black;
+    border: 2px solid black;
     margin: 0;
     padding: 0;
+    z-index: 900;
 }
+
 #main-navbar > * {
     color: white!important;
     font-family: 'Monoton', cursive;
@@ -294,6 +297,13 @@ nav {
     letter-spacing: 0.8em;
     background-color: rgba(255, 255, 255, 0.9);
     font-weight: bolder;
+}
+
+#post-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
 }
 
 /*Individual Posts*/

@@ -18,7 +18,7 @@
 <!--        </div>-->
 <!--    </div>-->
 <!--    </div>-->
-
+<div id="post-cards">
 <div class="card container" th:each="post : ${posts}" style="width: 25rem;">
 <!--    <img src="..." class="card-img-top">-->
     <div class="card-body">
@@ -28,6 +28,7 @@
         <p class="card-text" th:text="${post.description}">Text</p>
         <button class="hello" id="post-button"><a th:href="${'/posts/' + post.id}" >Expand.</a></button>
     </div>
+</div>
 </div>
 </div>
 </body>
