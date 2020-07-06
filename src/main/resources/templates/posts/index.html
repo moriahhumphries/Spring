@@ -26,7 +26,7 @@
         <a th:href="${'/posts/' + post.id}">
         <h5 class="card-title flicker-slow text-center" id="post-title" th:text="${post.title}">Title</h5>
         </a>
-        <p class="card-text" th:text="${post.description}">Text</p>
+        <p class="card-text" id="post-text" th:text="${post.description}">Text</p>
         <button class="hello" id="post-button"><a th:href="${'/posts/' + post.id}" >Expand.</a></button>
     </div>
 </div>
