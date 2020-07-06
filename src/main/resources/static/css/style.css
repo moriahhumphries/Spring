@@ -271,6 +271,15 @@ nav {
     background-color: rgba(247, 236, 227, 0.7);
 }
 
+#posts-header {
+    display: block;
+    width: 100vw;
+    color: white;
+    font-family: 'Monoton', cursive;
+    text-shadow: 3px 3px 5px #000000;
+    font-size: 4em;
+}
+
 #post-title {
     font-family: 'Monoton', cursive;
     color: #e0830d!important;
