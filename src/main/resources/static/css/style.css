@@ -7,7 +7,7 @@
 #main-navbar {
     height: 10vh;
     width: 100vw;
-    background-color: black;
+    background-image: url("img/white-and-black.jpg");
     margin: 0;
     padding: 0;
 }
