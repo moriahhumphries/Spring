@@ -43,6 +43,8 @@ public class PostsController {
         return "posts/show";
     }
 
+
+
     @GetMapping("/posts/create")
     public String showForm(Model viewModel){
         viewModel.addAttribute("post", new Post());
@@ -67,11 +69,11 @@ public class PostsController {
     }
 
     @PostMapping("/posts/{id}/edit")
-    public String update(@ModelAttribute Post posttoEdit){
+    public String update(@ModelAttribute Post postToEdit){
         User currentUser = usersDao.getOne(1L);
-        posttoEdit.setOwner(currentUser);
-        postsDao.save(posttoEdit);
-        return "redirect:/posts/" + posttoEdit.getId();
+        postToEdit.setOwner(currentUser);
+        postsDao.save(postToEdit);
+        return "redirect:/posts/" + postToEdit.getId();
     }
 
     @PostMapping("/posts/{id}/delete")

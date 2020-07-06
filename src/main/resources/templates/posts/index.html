@@ -19,11 +19,11 @@
 <!--    </div>-->
 <!--    </div>-->
 
-<div class="card container" th:each="post : ${posts}" style="width: 18rem;">
+<div class="card container" th:each="post : ${posts}" style="width: 25rem;">
     <img src="..." class="card-img-top">
     <div class="card-body">
-        <a href="/posts/">
-        <h5 class="card-title"th:text="${post.title}">Title</h5>
+        <a th:href="${'/posts/' + post.id}">
+        <h5 class="card-title" th:text="${post.title}">Title</h5>
         </a>
         <p class="card-text" th:text="${post.description}">Text</p>
         <a href="#" class="btn btn-primary">Expand.</a>
