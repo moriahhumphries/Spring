@@ -26,7 +26,7 @@
         <h5 class="card-title" th:text="${post.title}">Title</h5>
         </a>
         <p class="card-text" th:text="${post.description}">Text</p>
-        <a href="#" class="btn btn-primary">Expand.</a>
+        <a th:href="${'/posts/' + post.id}" class="btn btn-primary">Expand.</a>
     </div>
 </div>
 </div>
