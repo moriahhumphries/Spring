@@ -127,9 +127,9 @@ public class PostIntegrationTests {
         // Makes a Post request to /posts/{id}/edit and expect a redirection to the post show page
         this.mvc.perform(
                 post("/posts/" + existingPost.getId() + "/edit").with(csrf())
-                        .session((MockHttpSession) httpSession)
-                        .param("title", "edited title")
-                        .param("description", "edited description"))
+                        .session((MockHttpSession) httpSession))
+//                        .param("title", "edited title")
+//                        .param("description", "edited description"))
                 .andExpect(status().is3xxRedirection());
 
         // Makes a GET request to /posts/{id} and expect a redirection to the posts show page
