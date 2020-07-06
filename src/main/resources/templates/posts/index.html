@@ -23,10 +23,10 @@
     <img src="..." class="card-img-top">
     <div class="card-body">
         <a th:href="${'/posts/' + post.id}">
-        <h5 class="card-title" th:text="${post.title}">Title</h5>
+        <h5 class="card-title flicker-slow text-center" id="post-title" th:text="${post.title}">Title</h5>
         </a>
         <p class="card-text" th:text="${post.description}">Text</p>
-        <a th:href="${'/posts/' + post.id}" class="btn btn-primary">Expand.</a>
+        <button class="hello" id="post-button"><a th:href="${'/posts/' + post.id}" >Expand.</a></button>
     </div>
 </div>
 </div>

@@ -17,6 +17,11 @@
     font-size: 1.5em!important;
 }
 
+/*#main-navbar > li > a:hover {*/
+/*    font-size: 1.65em;*/
+/*    text-shadow: 4px 4px 6px #000000;*/
+/*}*/
+
 nav {
     color: white!important;
     font-family: 'Monoton', cursive;
@@ -259,7 +264,39 @@ nav {
 
 .card {
     margin: 20px;
+    background-color: rgba(247, 236, 227, 0.7);
 }
+
+#post-title {
+    font-family: 'Monoton', cursive;
+    color: #e0830d!important;
+    font-size: 3em;
+    text-decoration: none!important;
+}
+
+#post-button {
+    font-family: 'Monoton', cursive;
+    height: 4em;
+    width: 100%;
+    padding: 1.25em;
+    margin: 1em auto;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(24, 83, 83, 0.6);
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    transition: all 0.2s cubic-bezier(.4,0,.2,1);
+    box-shadow: 1px 1px 1px rgba(19, 62, 62, 0.5);
+    text-decoration: none;
+}
+
+#post-button:hover {
+    letter-spacing: 0.8em;
+    background-color: rgba(255, 255, 255, 0.9);
+    font-weight: bolder;
+}
+
+/*Individual Posts*/
 
 
 
