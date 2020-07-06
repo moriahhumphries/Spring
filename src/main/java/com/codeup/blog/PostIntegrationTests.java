@@ -89,8 +89,8 @@ public class PostIntegrationTests {
                 post("/posts/create").with(csrf())
                         .session((MockHttpSession) httpSession)
                         // Add all the required parameters to your request like this
-                        .param("title", "brand new mac")
-                        .param("description", "best buy sale"))
+                        .param("title", "a kitten")
+                        .param("description", "very beautiful"))
                 .andExpect(status().is3xxRedirection());
     }
 
