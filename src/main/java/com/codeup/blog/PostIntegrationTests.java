@@ -1,5 +1,4 @@
 package com.codeup.blog;
-
 import com.codeup.blog.daos.PostsRepository;
 import com.codeup.blog.daos.UsersRepository;
 import com.codeup.blog.models.Post;
@@ -15,9 +14,7 @@ import org.springframework.mock.web.MockHttpSession;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
-
 import javax.servlet.http.HttpSession;
-
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.junit.Assert.assertNotNull;
 import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.csrf;
