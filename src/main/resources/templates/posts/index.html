@@ -7,9 +7,9 @@
 <div id="index-main">
     <nav th:replace="fragments/navbar :: navbar" />
 <!--    <div class="container">-->
-<!--&lt;!&ndash;        <div th:if="${nopostsFound}">&ndash;&gt;-->
-<!--&lt;!&ndash;            No posts were found.&ndash;&gt;-->
-<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--        <div th:if="${nopostsFound}">-->
+<!--            No posts were found.-->
+<!--        </div>-->
 <!--        <div th:each="post : ${posts}">-->
 <!--            <a href="/posts/">-->
 <!--            <h3 th:text="${post.title}">Title</h3>-->
@@ -19,6 +19,7 @@
 <!--    </div>-->
 <!--    </div>-->
 <div id="post-cards">
+    <h3 id="posts-header">Enjoy.</h3>
 <div class="card container" th:each="post : ${posts}" style="width: 25rem;">
 <!--    <img src="..." class="card-img-top">-->
     <div class="card-body">
