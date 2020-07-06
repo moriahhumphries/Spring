@@ -40,6 +40,7 @@ nav {
 /*    align-content: center;*/
 /*}*/
 
+
 #posts-link, #create-link, #join-link, #login-link , #exit-link, #user-greeting, #logout-button{
     color: white!important;
     font-family: 'Monoton', cursive;
