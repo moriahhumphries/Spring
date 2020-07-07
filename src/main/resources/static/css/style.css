@@ -9,7 +9,6 @@
     width: 100vw;
     background-color: black;
     display: block;
-    border: 2px solid white;
     margin: 0;
     padding: 0;
     z-index: 900;
@@ -65,12 +64,7 @@ nav {
     margin: 0 !important;
     padding: 0 !important;
     background-color: #008080;
-    background-image:
-            /*linear-gradient(*/
-            /*to right bottom,*/
-            /*rgba(13, 23, 50, 0.7),*/
-            /*rgba(37, 132, 102, 0.7)), */
-    url("/img/teal-lights.jpg");
+    background-image: url("/img/teal-lights.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -292,7 +286,7 @@ nav {
 
 #post-title {
     font-family: 'Monoton', cursive;
-    color: #e0830d!important;
+    color: rgb(24, 83, 83) !important;
     font-size: 3em;
     text-decoration: none!important;
 }
@@ -333,6 +327,19 @@ nav {
 
 /*Individual Posts*/
 
+#single-post-main {
+    height: 100vh;
+    width: 100vw;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: #008080;
+    background-image: url("/img/tower.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+
 #edit-button, #delete-button {
     font-family: 'Monoton', cursive;
     height: 4em;
@@ -352,4 +359,6 @@ nav {
     align-content: center;
 
 }
+
+
 

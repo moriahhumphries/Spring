@@ -5,14 +5,15 @@
     <title>Title</title>
 </head>
 <body>
+<div id="single-post-main">
 <nav th:replace="fragments/navbar :: navbar" />
 <div class="container">
     <div th:if="${post == null}">
         Post not found.
     </div>
-    <div th:if="${post}">
-        <div th:text="${postId}">ID</div>
-        <h3 th:text="${post.title}">Title</h3>
+    <div class="card container" th:if="${post}">
+<!--        <div th:text="${postId}">ID</div>-->
+        <h3 class="posts-header" th:text="${post.title}">Title</h3>
         <div th:text="${post.description}">Description</div>
         <div>Created by <span th:text="${post.owner.username}"></span></div>
         <button class="hello" id="edit-button"><a th:href="${'/posts/' + post.id + '/edit'}" >Change or Delete.</a></button>
@@ -28,6 +29,7 @@
 <!--        </div>-->
 
     </div>
+</div>
 </div>
 </body>
 </html>

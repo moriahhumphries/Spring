@@ -20,12 +20,12 @@
 <!--    </div>-->
 
 <div id="post-cards">
-    <h3 id="posts-header" class="text-center">Enjoy.</h3>
+    <h3 id="posts-header" class="text-center flicker-slow">Enjoy.</h3>
 <div class="card container" th:each="post : ${posts}" style="width: 25rem;">
 <!--    <img src="..." class="card-img-top">-->
     <div class="card-body">
         <a th:href="${'/posts/' + post.id}">
-        <h5 class="card-title flicker-slow text-center" id="post-title" th:text="${post.title}">Title</h5>
+        <h5 class="card-title text-center" id="post-title" th:text="${post.title}">Title</h5>
         </a>
         <p class="card-text" id="post-text" th:text="${post.description}">Text</p>
         <button class="hello" id="post-button"><a th:href="${'/posts/' + post.id}" >Expand.</a></button>
