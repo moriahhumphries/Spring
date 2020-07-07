@@ -307,7 +307,7 @@ nav {
     text-decoration: none;
 }
 
-#post-button:hover {
+#post-button:hover, #submit-post-button:hover {
     letter-spacing: 0.8em;
     background-color: rgba(255, 255, 255, 0.9);
     font-weight: bolder;
@@ -346,7 +346,7 @@ nav {
     background-position: top;
 }
 
-#post-title-single, #edit-post-title, #edit-post-description {
+#post-title-single, #edit-post-title, #edit-post-description, #create-post-title, #create-post-description {
     font-family: 'Monoton', cursive;
     color: rgb(24, 83, 83) !important;
     font-size: 3em;
@@ -359,7 +359,7 @@ nav {
     color: rgba(19, 62, 62, 100);
 }
 
-#edit-button, #delete-button, #submit-edit-button {
+#edit-button, #delete-button, #submit-edit-button, #submit-created-post-button{
     font-family: 'Monoton', cursive;
     height: 4em;
     width: 50%;
@@ -378,7 +378,7 @@ nav {
     align-content: center;
 }
 
-#edit-button:hover, #delete-button:hover, #submit-edit-button:hover {
+#edit-button:hover, #delete-button:hover, #submit-edit-button:hover, #submit-post-button:hover, #submit-created-post-button:hover {
     letter-spacing: 0.8em;
     background-color: rgba(255, 255, 255, 0.9);
     font-weight: bolder;
@@ -398,7 +398,7 @@ nav {
     background-position: center;
 }
 
-#edit-post-title, #edit-post-description {
+#edit-post-title, #edit-post-description, #create-post-title, #create-post-description {
     display: block;
     width: 100%;
 }
@@ -406,6 +406,30 @@ nav {
 #input-edit-title, #input-edit-description {
     width: 100%;
 }
+
+/*Create Post*/
+
+#create-main {
+    height: 100vh;
+    width: 100vw;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: #008080;
+    background-image: url("/img/this-place.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+}
+
+#create-post-container {
+    width: 25%;
+}
+
+ #create-post-title-field, #create-post-description-field {
+    display: block;
+    width: 100%;
+}
+
 
 
 

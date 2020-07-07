@@ -5,17 +5,21 @@
     <meta charset="UTF-8">
 </head>
 <body>
+<div id="create-main">
 <nav th:replace="fragments/navbar :: navbar" />
+    <div class="card container" id="create-post-container">
 <div class="container">
     <form th:action="@{/posts/create}" th:method="post" th:object="${post}">
-        Title:
-        <input th:field="*{title}" />
+        <label for="title" id="create-post-title" class="text-center">Title</label>
+        <input id="create-post-title-field" th:field="*{title}" />
         <br />
-        Description:
-        <input th:field="*{description}" />
+        <label for="description" id="create-post-description" class="text-center">Description</label>
+        <input id="create-post-description-field" th:field="*{description}" />
         <br />
-        <input type="submit" />
+        <button class="hello" id="submit-created-post-button">Submit.</button>
     </form>
+</div>
+</div>
 </div>
 </body>
 </html>
