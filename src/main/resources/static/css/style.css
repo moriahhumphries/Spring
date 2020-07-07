@@ -197,7 +197,7 @@ nav {
 }
 
 .login-labels {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Libre Baskerville', serif;
     color: white;
     font-size: 1.25em;
     text-shadow: 3px 3px 5px #000000;
@@ -249,7 +249,7 @@ nav {
 }
 
 .signup-labels {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Libre Baskerville', serif;
     color: white;
     font-size: 1.25em;
     text-shadow: 3px 3px 5px #000000;
@@ -321,8 +321,15 @@ nav {
 }
 
 #post-text {
-    font-family: 'Roboto', sans-serif;
-    color: rgba(19, 62, 62, 100);
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.5em;
+    color: rgb(19, 62, 62);
+}
+
+#creator {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1em;
+    color: rgba(19, 62, 62, 80);
 }
 
 /*Individual Posts*/
@@ -339,8 +346,20 @@ nav {
     background-position: top;
 }
 
+#post-title-single, #edit-post-title, #edit-post-description {
+    font-family: 'Monoton', cursive;
+    color: rgb(24, 83, 83) !important;
+    font-size: 3em;
+    text-decoration: none!important;
+}
 
-#edit-button, #delete-button {
+#post-text-single {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.5em;
+    color: rgba(19, 62, 62, 100);
+}
+
+#edit-button, #delete-button, #submit-edit-button {
     font-family: 'Monoton', cursive;
     height: 4em;
     width: 50%;
@@ -357,7 +376,35 @@ nav {
     display: flex;
     justify-content: center;
     align-content: center;
+}
 
+#edit-button:hover, #delete-button:hover, #submit-edit-button:hover {
+    letter-spacing: 0.8em;
+    background-color: rgba(255, 255, 255, 0.9);
+    font-weight: bolder;
+}
+
+/*Edit and Delete Page*/
+
+#edit-delete-main {
+    height: 100vh;
+    width: 100vw;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: #008080;
+    background-image: url("/img/city-sky.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#edit-post-title, #edit-post-description {
+    display: block;
+    width: 100%;
+}
+
+#input-edit-title, #input-edit-description {
+    width: 100%;
 }
 
 

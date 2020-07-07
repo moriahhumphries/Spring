@@ -13,9 +13,9 @@
     </div>
     <div class="card container" th:if="${post}">
 <!--        <div th:text="${postId}">ID</div>-->
-        <h3 class="posts-header" th:text="${post.title}">Title</h3>
-        <div th:text="${post.description}">Description</div>
-        <div>Created by <span th:text="${post.owner.username}"></span></div>
+        <h5 class="card-title text-center" id="post-title-single" th:text="${post.title}">Title</h5>
+        <div id="post-text-single" class="text-center" th:text="${post.description}">Description</div>
+        <div id="creator" class="text-center">Created by <span th:text="${post.owner.username}"></span></div>
         <button class="hello" id="edit-button"><a th:href="${'/posts/' + post.id + '/edit'}" >Change or Delete.</a></button>
 <!--        <form th:href="${'/posts/' + post.id + '/edit'}" method="post">-->
 <!--            <button class="btn btn-danger">Change or Obliterate</button>-->
